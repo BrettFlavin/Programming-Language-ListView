@@ -6,7 +6,7 @@
              BackgroundColor="Silver">
 
     <ContentPage.Content>
-        <StackLayout Margin="20,35,20,20">
+        <StackLayout Padding="10">
             <Label Text="A Collection of Programming Languages - from A to Z"
                    HorizontalTextAlignment="Center"
                    FontAttributes="Bold"
@@ -14,12 +14,24 @@
                    VerticalOptions="CenterAndExpand" 
                    HorizontalOptions="CenterAndExpand"/>
 
-            <ListView ItemsSource="{Binding ViewList}"
+            <ListView x:Name="list"
                       HasUnevenRows="true"
-                      ItemTapped="ListView_ItemTapped">
+                      Margin="10,10,10,0"
+                      ItemTapped="ListView_ItemTapped">                
                 <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
+                    <DataTemplate>                        
+                        <ViewCell>                            
+                            <!-- Create the Context Actions using MenuItems -->
+                            <ViewCell.ContextActions>
+                                <MenuItem Clicked="OnMore"
+                                          CommandParameter="{Binding .}"
+                                          Text="More" />
+                                <MenuItem Clicked="OnDelete"
+                                          CommandParameter="{Binding .}"
+                                          Text="Delete" 
+                                          IsDestructive="True" />
+                            </ViewCell.ContextActions>
+
                             <Grid Padding="10">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto" />
@@ -45,12 +57,11 @@
                                        Grid.Row="1"
                                        Grid.Column="1"               
                                        VerticalOptions="End" />
-                            </Grid>
-                        </ViewCell>
+                            </Grid>                            
+                        </ViewCell>                        
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
