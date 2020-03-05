@@ -1,34 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HW4_List"
              x:Class="HW4_List.HomePage"
-             Title = "Home"
-             BackgroundColor="Silver">
+             Title="Home"
+             BackgroundColor="Silver" >
 
     <ContentPage.Content>
         <StackLayout Padding="10">
+
+            <!-- Page Heading -->
             <Label Text="A Collection of Programming Languages - from A to Z"
-                   HorizontalTextAlignment="Center"
                    FontAttributes="Bold"
                    FontSize="Large"
-                   VerticalOptions="CenterAndExpand" 
-                   HorizontalOptions="CenterAndExpand"/>
+                   HorizontalTextAlignment="Center"/>
 
+            <!-- A buttton that shows another language when clicked -->
+            <Button Text="Gimme a Language!"
+                    CornerRadius="10"
+                    FontAttributes="Bold"
+                    FontSize="Small"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="LanguageButton_Clicked" />
+
+            <!-- A ListView to display a list of programming languages -->
             <ListView x:Name="list"
                       HasUnevenRows="true"
                       Margin="10,10,10,0"
-                      ItemTapped="ListView_ItemTapped">                
+                      SelectionMode="None"
+                      IsPullToRefreshEnabled="True"
+                      RefreshControlColor="Blue"
+                      Refreshing="List_Refreshing">           
+                
                 <ListView.ItemTemplate>
                     <DataTemplate>                        
                         <ViewCell>                            
-                            <!-- Create the Context Actions using MenuItems -->
+                            <!-- Context Actions "More" and "Favorite" created as MenuItems -->
                             <ViewCell.ContextActions>
                                 <MenuItem Clicked="OnMore"
                                           CommandParameter="{Binding .}"
                                           Text="More" />
-                                <MenuItem Clicked="OnDelete"
+                                <MenuItem Clicked="OnFavorite"
                                           CommandParameter="{Binding .}"
-                                          Text="Delete" 
+                                          Text="Favorite" 
                                           IsDestructive="True" />
                             </ViewCell.ContextActions>
 
@@ -39,9 +54,10 @@
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />                                   
                                 </Grid.ColumnDefinitions>
 
+                                <!-- Bind the Language fields -->
                                 <Image Source="{Binding IconURL}"
                                        Margin="0,0,30,0"
                                        Aspect="AspectFit"
@@ -56,6 +72,17 @@
                                        FontAttributes="Italic"
                                        Grid.Row="1"
                                        Grid.Column="1"               
+                                       VerticalOptions="End" />
+                                
+                                <!-- Checkmark icon for favorites -->
+                                <Image x:Name="myicon"
+                                       Source="_blackcheck.png"
+                                       Aspect="AspectFit"
+                                       HeightRequest="20"
+                                       WidthRequest="20" 
+                                       Grid.Row="1"
+                                       Grid.Column="1"               
+                                       HorizontalOptions="End"
                                        VerticalOptions="End" />
                             </Grid>                            
                         </ViewCell>                        

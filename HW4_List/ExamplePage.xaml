@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HW4_List.ExamplePage"
+             Title="Example"
+             BackgroundColor="Silver" >
+
+    <ContentPage.Content>
+        <StackLayout Margin="5,0,5,0"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Start" >
+            
+            <!-- name of the language -->
+            <Label Text="{Binding Name}" 
+                   FontSize="Large"
+                   TextDecorations="Underline"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center" />
+
+            <!-- logo of the language -->
+            <Image Source="{Binding IconURL}"
+                   Aspect="AspectFit"
+                   HeightRequest="100"
+                   WidthRequest="100" />
+            
+            <!-- image of language example code -->
+            <Image Source="{Binding ExampleURL}"
+                   VerticalOptions="FillAndExpand" 
+                   HorizontalOptions="FillAndExpand"/>                    
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

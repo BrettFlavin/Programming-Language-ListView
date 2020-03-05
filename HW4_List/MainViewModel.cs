@@ -11,13 +11,13 @@ namespace HW4_List
         public string ReleaseDate { get; set; }   // initial release date of the language
         public string Description { get; set; }   // short decription of the language
         public string IconURL { get; set; }       // language's logo
-        public string ExampleURL { get; set; }    // language example code image
+        public string ExampleURL { get; set; }    // image of example code 
     }
 
     public class MainViewModel
     {
         // collection to hold the languages - the ItemSource for the HomePage ListView
-        public static ObservableCollection<Language> LanguageList { get; set; } = new ObservableCollection<Language> 
+        public static ObservableCollection<Language> LanguageList { get; set; } = new ObservableCollection<Language>        
         {
             // add the languages to the list
             new Language
@@ -33,7 +33,7 @@ namespace HW4_List
                               "editor portion was also used as the basis for the PaperClip word processor.The language was not ported to any other platforms. The 6502 assembly " +
                               "language source code for Action! was made available under the GNU General Public License by the author in 2015.",
                 IconURL = "action.png",
-                ExampleURL = " "
+                ExampleURL = "action_example.png"
             },
 
             new Language
@@ -48,7 +48,7 @@ namespace HW4_List
                               "greatly updated version of BASIC with a visual forms builder. This reignited use of the language and VB remains a major programming language in the form " +
                               "of VB.NET.",
                 IconURL = "basic.png",
-                ExampleURL = " "
+                ExampleURL = "basic_example.png"
             },
 
             new Language
@@ -67,7 +67,7 @@ namespace HW4_List
                               "very small having dedicated functions. Although C# applications are intended to be economical with regard to memory and processing power requirements, the " +
                               "language was not intended to compete directly on performance and size with C or assembly language",
                 IconURL = "csharp.png",
-                ExampleURL = " "
+                ExampleURL = "csharp_example.png "
             },
 
             new Language
@@ -82,7 +82,7 @@ namespace HW4_List
                               "according to the company representatives, it’s not obligatory now to have Dart SDK installed, the self-contained executables can now start running in a few " +
                               "seconds. The new extension is also integrated with Flutter toolkit, thus making it possible to use the compiler on small services (backend supporting for example).",
                 IconURL = "dart.png",
-                ExampleURL = " "
+                ExampleURL = "dart_example.png"
             },
 
             new Language
@@ -99,7 +99,7 @@ namespace HW4_List
                               "Ericsson, developed by Joe Armstrong, Robert Virding, and Mike Williams in 1986, but was released as free and open-source software in 1998. Erlang/OTP is " +
                               "supported and maintained by the Open Telecom Platform(OTP) product unit at Ericsson.",
                 IconURL = "erlang.png",
-                ExampleURL = " "
+                ExampleURL = "erlang_example.png"
             },
 
             new Language
@@ -113,8 +113,8 @@ namespace HW4_List
                               "a .NET Framework implementation of a core of the programming language OCaml. It has also been influenced by C#, Python, Haskell, Scala, and Erlang. The " +
                               "programmer does not need to declare types in F# — the compiler deduces types during compilation (type inference). F# also allows explicit type annotations, " +
                               "and requires them in some situations.",
-                IconURL = "fsharp",
-                ExampleURL = " "
+                IconURL = "fsharp.png",
+                ExampleURL = "fsharp_example.png"
             },
 
             new Language
@@ -126,7 +126,7 @@ namespace HW4_List
                               "self-hosting compiler toolchain targeting multiple operating systems, mobile devices, and WebAssembly.gccgo, a GCC frontend. A third-party transpiler GopherJS " +
                               "compiles Go to JavaScript for front-end web development.",
                 IconURL = "go.png",
-                ExampleURL = " "
+                ExampleURL = "go_example.png"
             },
 
             new Language
@@ -142,7 +142,7 @@ namespace HW4_List
                               "is used in academia and industry. As of September 2019, Haskell was the 23rd most popular programming language in terms of Google searches for tutorials and made " +
                               "up less than 1% of active users on the GitHub source code repository.",
                 IconURL = "haskell.png",
-                ExampleURL = " "
+                ExampleURL = "haskell_example.png "
             },
 
             new Language
@@ -155,7 +155,7 @@ namespace HW4_List
                               "to C (relying on a custom copying garbage collector using Cheney's algorithm) and JavaScript (both browser and Node.js-based). There are third-party code generators " +
                               "for other platforms, including JVM, CIL, and LLVM. Idris is named after a singing dragon from the 1970s UK children's television program Ivor the Engine.",
                 IconURL = "idris.png",
-                ExampleURL = " "
+                ExampleURL = "idris_example.png"
             },
 
             new Language
@@ -171,7 +171,7 @@ namespace HW4_List
                               "web browsers, JavaScript engines are also now embedded in server-side website deployments and non-browser applications. Although there are similarities between JavaScript " +
                               "and Java, including language name, syntax, and respective standard libraries, the two languages are distinct and differ greatly in design.",
                 IconURL = "javascript.png",
-                ExampleURL = " "
+                ExampleURL = "javascript_example.png"
             },
 
             new Language
@@ -185,7 +185,7 @@ namespace HW4_List
                               "been included as an alternative to the standard Java compiler.The Android Kotlin compiler lets the user choose between targeting Java 6 or Java 8 compatible bytecode. The " +
                               "name comes from Kotlin Island, near St. Petersburg",
                 IconURL = "kotlin.png",
-                ExampleURL = " "
+                ExampleURL = "kotlin_example.png"
             },
 
             new Language
@@ -201,7 +201,7 @@ namespace HW4_List
                               "structures, and Lisp source code is made of lists. Thus, Lisp programs can manipulate source code as a data structure, giving rise to the macro systems that allow programmers to create " +
                               "new syntax or new domain-specific languages embedded in Lisp.",
                 IconURL = "lisp.png",
-                ExampleURL = " "
+                ExampleURL = "lisp_example.png"
             },
 
             new Language
@@ -213,7 +213,7 @@ namespace HW4_List
                               "optional toolbox uses the MuPAD symbolic engine allowing access to symbolic computing abilities. An additional package, Simulink, adds graphical multi-domain simulation and model-based " +
                               "design for dynamic and embedded systems. As of 2018, MATLAB has more than 3 million users worldwide. MATLAB users come from various backgrounds of engineering, science, and economics.",
                 IconURL = "matlab.png",
-                ExampleURL = " "
+                ExampleURL = "matlab_example.png"
             },
 
             new Language
@@ -228,7 +228,7 @@ namespace HW4_List
                               "a cross-platform Tcl/Tk frontend named newLISP-tk was released around version 6.3.0. In 2006, 64-bit precision was introduced for integer arithmetic and for some operations on files " +
                               "in version 9.0. Since the release of 6.5 in mid-2002, development has been very active, and many new features have been added.",
                 IconURL = "newlisp.png",
-                ExampleURL = " "
+                ExampleURL = "newlisp_example.png "
             },
 
             new Language
@@ -243,7 +243,7 @@ namespace HW4_List
                               "project managed and principally maintained by the French Institute for Research in Computer Science and Automation(INRIA). In the early 2000s, elements from OCaml were adopted by many languages, " +
                               "notably F# and Scala.",
                 IconURL = "ocaml.png",
-                ExampleURL = " "
+                ExampleURL = "ocaml_example.png"
             },
 
             new Language
@@ -260,7 +260,7 @@ namespace HW4_List
                               "operating systems. A global community of programmers develops and maintains CPython, an open source reference implementation. A non-profit organization, the Python Software Foundation, manages and " +
                               "directs resources for Python and CPython development.",
                 IconURL = "python.png",
-                ExampleURL = " "
+                ExampleURL = "python_example.png"
             },
 
             new Language
@@ -272,7 +272,7 @@ namespace HW4_List
                               ".QL are optimised, compiled into SQL and can then be executed on any major relational database management system. .QL query language is being used in SemmleCode to query a relational representation " +
                               "of Java programs. .QL is developed at Semmle Limited and is based on the company's proprietary technology.",
                 IconURL = "ql.png",
-                ExampleURL = " "
+                ExampleURL = "ql_example.png"
             },
 
             new Language
@@ -286,7 +286,7 @@ namespace HW4_List
                               "interface, there are several third-party graphical user interfaces, such as RStudio, an integrated development environment, and Jupyter, a notebook interface. R is an implementation of the S " +
                               "programming language combined with lexical scoping semantics, inspired by Scheme. There are some important differences, but much of the code written for S runs unaltered.",
                 IconURL = "r.png",
-                ExampleURL = " "
+                ExampleURL = "r_example.png"
             },
 
             new Language
@@ -301,7 +301,7 @@ namespace HW4_List
                               "concept of protocol extensibility, an extensibility system that can be applied to types, structs and classes, which Apple promotes as a real change in programming paradigms they term " +
                               "'protocol-oriented programming'(similar to traits).",
                 IconURL = "swift.png",
-                ExampleURL = " "
+                ExampleURL = "swift_example.png"
             },
 
             new Language
@@ -316,7 +316,7 @@ namespace HW4_List
                               "entities.There are third-party header files for popular libraries such as jQuery, MongoDB, and D3.js. TypeScript headers for the Node.js basic modules are also available, allowing development of Node.js " +
                               "programs within TypeScript.",
                 IconURL = "typescript.png",
-                ExampleURL = " "
+                ExampleURL = "typescript_example.png"
             },
 
             new Language
@@ -329,7 +329,7 @@ namespace HW4_List
                               "into alignment, help overcome inhibitions against modelling common in the programmer community, and reduce some of the difficulties of model-driven development that arise from the need to use large, expensive " +
                               "or incomplete tools. One design objective is to enable programmers to model in a way they see as natural, by adding modelling constructs to programming languages.",
                 IconURL = "umple.png",
-                ExampleURL = " "
+                ExampleURL = "umple_example.png"
             },
 
             new Language
@@ -346,7 +346,7 @@ namespace HW4_List
                               "Visual Basic 6.0 won the technical impact award at The 19th Annual D.I.C.E.Awards. A dialect of Visual Basic, Visual Basic for Applications(VBA), is used as a macro or scripting language within several Microsoft " +
                               "applications, including Microsoft Office.",
                 IconURL = "visualbasic.png",
-                ExampleURL = " "
+                ExampleURL = "visualbasic_example.png "
             },
 
             new Language
@@ -363,7 +363,7 @@ namespace HW4_List
                               "The language was officially named in June 2013 although, as the backend of the computing system Mathematica, it has been in use in various forms for over 30 years since Mathematica's initial release. Before 2013, it " +
                               "was internally referred to by several names, such as 'M' and 'Wolfram Language.' Other possible names Wolfram Research considered include 'Lingua' and 'Express.'",
                 IconURL = "wolfram.png",
-                ExampleURL = " "
+                ExampleURL = "wolfram_example.png"
             },
 
             new Language
@@ -375,7 +375,7 @@ namespace HW4_List
                               "some physical device like a sensor, motor, or relay, or some operation such as addition, comparison, or text concatenation. XOD is also able to let the user build up some missing node using other nodes, without switching " +
                               "to textual programming.",
                 IconURL = "xod.png",
-                ExampleURL = " "
+                ExampleURL = "xod_example.png"
             },
 
             new Language
@@ -387,7 +387,7 @@ namespace HW4_List
                               "and The New York Times. Some of these APIs still require an API key to access them.On April 29 of 2009, Yahoo introduced the capability to execute the tables of data built through YQL using JavaScript run on the company's " +
                               "servers for free. On January 3, 2019 Yahoo retired the YQL API service.",
                 IconURL = "yql.png",
-                ExampleURL = " "
+                ExampleURL = "yql_example.png"
             },
 
             new Language
@@ -398,9 +398,10 @@ namespace HW4_List
                               "'Version Z, Our Programming Language'. ZOPL is still in use at CGI Group(formerly known as RealTime Datapro), who ported it to VAX / VMS and Unix in the 1980s, and to Windows in 1998. It runs on Windows XP / 2000 / 2003 and Red " +
                               "Hat Linux. The RTM(formerly ZUG) language compiler and runtime framework are written in ZOPL. Outside of CGI, ZOPL has not been in general use since the late 1980s, although there is still one known working system where it is " +
                               "found embedded in programs written in the KARL programming language.",
-                IconURL = "z.png",
-                ExampleURL = " "
+                IconURL = "zopl.png",
+                ExampleURL = "zopl_example.png"
             }
-        }; // end LanguageList    
+        }; // end of LanguageList    
+
     }
 }

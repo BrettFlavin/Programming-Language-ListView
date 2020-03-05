@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HW4_List.DetailPage"
+             Title="Details"
+             BackgroundColor="Silver" > 
+    
+    <ContentPage.Content>
+        <StackLayout Margin="5,0,5,0"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Start">
+            
+            <!-- name of the language -->
+            <Label Text="{Binding Name}" 
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   TextDecorations="Underline"
+                   HorizontalTextAlignment="Center" />
+
+            <!-- logo of the language -->
+            <Image Source="{Binding IconURL}"
+                   Aspect="AspectFit"
+                   HeightRequest="150"
+                   WidthRequest="150" 
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"/>
+            
+            <!-- details about the language -->
+            <ScrollView Margin="10,10,10,10">                
+                <Label Text="{Binding Description}"
+                       FontAttributes="Bold"
+                       FontSize="12"
+                       VerticalOptions="Start"
+                       HorizontalOptions="Start"/>
+            </ScrollView>
+
+            <!-- button to get example code when clicked -->
+            <Button Text="See an Example!"
+                    CornerRadius="10"
+                    FontAttributes="Bold"
+                    FontSize="Small"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"
+                    Clicked="ExampleButton_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
