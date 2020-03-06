@@ -17,5 +17,12 @@ namespace HW4_List
             InitializeComponent();
             BindingContext = theLanguage;
         }
+
+        // event is fired when user clicks "Home" Button
+        private async void HomeButton_Clicked(object sender, EventArgs e)
+        {
+            // go back to HomePage
+            await Navigation.PopToRootAsync();
+        }
     }
 }

@@ -4,23 +4,28 @@
              xmlns:local="clr-namespace:HW4_List"
              x:Class="HW4_List.HomePage"
              Title="Home"
-             BackgroundColor="Silver" >
+             x:Name="Home"
+             BackgroundImageSource="backgroundcode_blue.png">
 
     <ContentPage.Content>
         <StackLayout Padding="10">
 
             <!-- Page Heading -->
             <Label Text="A Collection of Programming Languages - from A to Z"
+                   TextColor="Black"
+                   BackgroundColor="White"
+                   Opacity=".6"
                    FontAttributes="Bold"
-                   FontSize="Large"
+                   FontSize="26"                   
                    HorizontalTextAlignment="Center"/>
 
             <!-- A buttton that shows another language when clicked -->
             <Button Text="Gimme a Language!"
+                    BackgroundColor="White"
                     CornerRadius="10"
                     FontAttributes="Bold"
                     FontSize="Small"
-                    VerticalOptions="CenterAndExpand" 
+                    VerticalOptions="StartAndExpand" 
                     HorizontalOptions="CenterAndExpand"
                     Clicked="LanguageButton_Clicked" />
 
@@ -30,24 +35,23 @@
                       Margin="10,10,10,0"
                       SelectionMode="None"
                       IsPullToRefreshEnabled="True"
-                      RefreshControlColor="Blue"
-                      Refreshing="List_Refreshing">           
+                      RefreshControlColor="Blue" >           
                 
                 <ListView.ItemTemplate>
                     <DataTemplate>                        
                         <ViewCell>                            
-                            <!-- Context Actions "More" and "Favorite" created as MenuItems -->
+                            <!-- Context Actions "OnMore" and "OnDelete" created as MenuItems -->
                             <ViewCell.ContextActions>
                                 <MenuItem Clicked="OnMore"
                                           CommandParameter="{Binding .}"
-                                          Text="More" />
-                                <MenuItem Clicked="OnFavorite"
+                                          Text="More" />                                
+                                <MenuItem Clicked="OnDelete"
                                           CommandParameter="{Binding .}"
-                                          Text="Favorite" 
+                                          Text="Delete" 
                                           IsDestructive="True" />
                             </ViewCell.ContextActions>
 
-                            <Grid Padding="10">
+                            <Grid Padding="10" BackgroundColor="White" Opacity=".7">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto" />
                                     <RowDefinition Height="*" />
@@ -65,25 +69,16 @@
                                        WidthRequest="60" 
                                        Grid.RowSpan="2"/>
                                 <Label Text="{Binding Name}"
+                                       TextColor="Black"
                                        FontAttributes="Bold"
                                        Grid.Row="0"
                                        Grid.Column="1" />
                                 <Label Text="{Binding ReleaseDate}"
+                                       TextColor="Black"
                                        FontAttributes="Italic"
                                        Grid.Row="1"
                                        Grid.Column="1"               
-                                       VerticalOptions="End" />
-                                
-                                <!-- Checkmark icon for favorites -->
-                                <Image x:Name="myicon"
-                                       Source="_blackcheck.png"
-                                       Aspect="AspectFit"
-                                       HeightRequest="20"
-                                       WidthRequest="20" 
-                                       Grid.Row="1"
-                                       Grid.Column="1"               
-                                       HorizontalOptions="End"
-                                       VerticalOptions="End" />
+                                       VerticalOptions="End" />       
                             </Grid>                            
                         </ViewCell>                        
                     </DataTemplate>

@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HW4_List.DetailPage"
              Title="Details"
-             BackgroundColor="Silver" > 
+             x:Name="Details"
+             BackgroundImageSource="backgroundcode_blue.png" > 
     
     <ContentPage.Content>
         <StackLayout Margin="5,0,5,0"
@@ -12,6 +13,9 @@
             
             <!-- name of the language -->
             <Label Text="{Binding Name}" 
+                   TextColor="Black"
+                   BackgroundColor="White"
+                   Opacity=".6"
                    FontSize="Large"
                    FontAttributes="Bold"
                    TextDecorations="Underline"
@@ -28,14 +32,18 @@
             <!-- details about the language -->
             <ScrollView Margin="10,10,10,10">                
                 <Label Text="{Binding Description}"
+                       TextColor="Black"
+                       BackgroundColor="White"
+                       Opacity=".8"
                        FontAttributes="Bold"
-                       FontSize="12"
+                       FontSize="14"
                        VerticalOptions="Start"
                        HorizontalOptions="Start"/>
             </ScrollView>
 
             <!-- button to get example code when clicked -->
             <Button Text="See an Example!"
+                    BackgroundColor="White"
                     CornerRadius="10"
                     FontAttributes="Bold"
                     FontSize="Small"

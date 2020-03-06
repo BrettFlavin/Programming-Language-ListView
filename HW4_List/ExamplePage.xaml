@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HW4_List.ExamplePage"
              Title="Example"
-             BackgroundColor="Silver" >
+             x:Name="Example"
+             BackgroundImageSource="backgroundcode_blue.png">
 
     <ContentPage.Content>
         <StackLayout Margin="5,0,5,0"
@@ -11,7 +12,10 @@
                      VerticalOptions="Start" >
             
             <!-- name of the language -->
-            <Label Text="{Binding Name}" 
+            <Label Text="{Binding Name}"  
+                   TextColor="Black"
+                   BackgroundColor="White"
+                   Opacity=".6"
                    FontSize="Large"
                    TextDecorations="Underline"
                    FontAttributes="Bold"
@@ -22,11 +26,24 @@
                    Aspect="AspectFit"
                    HeightRequest="100"
                    WidthRequest="100" />
-            
+
             <!-- image of language example code -->
             <Image Source="{Binding ExampleURL}"
-                   VerticalOptions="FillAndExpand" 
-                   HorizontalOptions="FillAndExpand"/>                    
+                   VerticalOptions="Start" 
+                   HorizontalOptions="Center"
+                   Aspect="AspectFit"
+                   HeightRequest="300"
+                   WidthRequest="300"/>
+            
+            <!-- button to go back to HomePage -->
+            <Button Text="Back to List"                    
+                    BackgroundColor="White"
+                    CornerRadius="10"
+                    FontAttributes="Bold"
+                    FontSize="Small"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="Center"
+                    Clicked="HomeButton_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

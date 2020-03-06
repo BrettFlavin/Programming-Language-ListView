@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace HW4_List
 {
+
+    // a class to represent a programming language
     public class Language
     {
         public string Name { get; set; }          // name of the programming language
@@ -16,10 +20,12 @@ namespace HW4_List
 
     public class MainViewModel
     {
-        // collection to hold the languages - the ItemSource for the HomePage ListView
+        // collection to hold the Language(s)
+        // the ItemSource for the HomePage ListView
         public static ObservableCollection<Language> LanguageList { get; set; } = new ObservableCollection<Language>        
         {
-            // add the languages to the list
+            // add a new Language to the LanguageList
+            // one Language has been created for each letter in a-z  
             new Language
             {
                 Name = "Action!",
