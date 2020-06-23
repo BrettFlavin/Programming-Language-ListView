@@ -5,7 +5,7 @@
              x:Class="HW4_List.HomePage"
              Title="Home"
              x:Name="Home"
-             BackgroundImageSource="backgroundcode_blue.png">
+             BackgroundImageSource="raindropBG.jpg">
 
     <ContentPage.Content>
         <StackLayout Padding="10">
@@ -84,6 +84,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

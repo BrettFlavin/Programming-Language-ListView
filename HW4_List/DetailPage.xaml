@@ -4,7 +4,7 @@
              x:Class="HW4_List.DetailPage"
              Title="Details"
              x:Name="Details"
-             BackgroundImageSource="backgroundcode_blue.png" > 
+             BackgroundImageSource="raindropBG.jpg" > 
     
     <ContentPage.Content>
         <StackLayout Margin="5,0,5,0"
